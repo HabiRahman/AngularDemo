@@ -1,0 +1,11 @@
+.textSuccess{
+    color: green;
+}
+
+.textError{
+    color: red;
+}
+
+.textItalic{
+    font-style: italic;
+}

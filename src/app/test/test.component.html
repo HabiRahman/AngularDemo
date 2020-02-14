@@ -1,3 +1,37 @@
 <p>test works!</p>
 <p>{{title}}</p>
 <p> URL : {{siteURL}}</p>
+<input [id]=myId type="text" value="Habi" >
+<br>    
+<input id={{myId}} type="text" value="Habi" [disabled]=isDisabled>
+<br>
+<div class="textSuccess"> Test Text </div>
+
+<input type="button" value="WriteLine" (click)="buttonClick()">
+<p>{{inputadded}}</p>
+
+<div *ngIf="displayDiv">
+    <label>Two Way Binding</label>
+    <input [(ngModel)]="name" type="text" name="" id="">
+    {{name}}
+</div>
+
+<div *ngIf="showName; then thenblock else elseblock">
+
+</div>
+
+<ng-template #thenblock>
+    <h1>My Name is Habeeb</h1>
+</ng-template>
+
+<ng-template #elseblock>
+<h1>My Name is Hidden</h1>
+</ng-template>
+
+
+<div [ngSwitch]="color">
+    <p *ngSwitchCase="'red'">red</p>
+    <p *ngSwitchCase="'greeen'"> greeen</p>
+    <p *ngSwitchCase="'blue'"> blue</p>
+
+</div>
