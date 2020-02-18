@@ -297,4 +297,6 @@
 <p> 
  {{title}}
 </p>
-<app-test></app-test>
+<h1>Event Emit from Child Component</h1>
+<h1>{{message}}</h1>
+<app-test (childEvent)="message=$event" [parentInput]="fromparent" ></app-test>

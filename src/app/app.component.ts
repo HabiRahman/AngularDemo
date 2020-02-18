@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Hey Here I come';
+  message="Initial Word";
+  fromparent="I am coming from parent, click me"
 }

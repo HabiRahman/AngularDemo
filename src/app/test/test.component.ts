@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
+  constructor() { }
 
   public myId = "InputId"
   isDisabled = false;
@@ -16,9 +17,15 @@ export class TestComponent implements OnInit {
   displayDiv = true;
   showName=true;
   color="blue";
-  constructor() { }
+  @Output() public childEvent = new EventEmitter();
+  @Input() public parentInput;
+
 
   ngOnInit() {
+  }
+
+  EventEmitCheck(){
+    this.childEvent.emit("Here I Emitted");
   }
 
   buttonClick(){
